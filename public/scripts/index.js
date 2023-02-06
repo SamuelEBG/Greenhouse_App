@@ -5,8 +5,8 @@ const authBarElement = document.querySelector("#authentication-bar");
 
 // Elements for sensor readings
 const tempElement = document.getElementById("temp");
-const humElement = document.getElementById("hum");
-const presElement = document.getElementById("pres");
+//const humElement = document.getElementById("hum");
+//const presElement = document.getElementById("pres");
 
 // MANAGE LOGIN/LOGOUT UI
 const setupUI = (user) => {
@@ -24,19 +24,19 @@ const setupUI = (user) => {
 
     // Database paths (with user UID)
     var dbPathTemp = 'UsersData/' + uid.toString() + '/temperature';
-    var dbPathHum = 'UsersData/' + uid.toString() + '/humidity';
-    var dbPathPres = 'UsersData/' + uid.toString() + '/pressure';
+    //var dbPathHum = 'UsersData/' + uid.toString() + '/humidity';
+    //var dbPathPres = 'UsersData/' + uid.toString() + '/pressure';
 
     // Database references
     var dbRefTemp = firebase.database().ref().child(dbPathTemp);
-    var dbRefHum = firebase.database().ref().child(dbPathHum);
-    var dbRefPres = firebase.database().ref().child(dbPathPres);
+    //var dbRefHum = firebase.database().ref().child(dbPathHum);
+    //var dbRefPres = firebase.database().ref().child(dbPathPres);
 
     // Update page with new readings
     dbRefTemp.on('value', snap => {
       tempElement.innerText = snap.val().toFixed(2);
     });
-
+    /*
     dbRefHum.on('value', snap => {
       humElement.innerText = snap.val().toFixed(2);
     });
@@ -44,7 +44,7 @@ const setupUI = (user) => {
     dbRefPres.on('value', snap => {
       presElement.innerText = snap.val().toFixed(2);
     });
-
+    */
   // if user is logged out
   } else{
     // toggle UI elements
