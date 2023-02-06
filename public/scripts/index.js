@@ -28,7 +28,7 @@ const setupUI = (user) => {
     //var dbPathPres = 'UsersData/' + uid.toString() + '/pressure';
 
     // Database references
-    var dbRefTemp = firebase.database().ref().child(dbPathTemp);
+    var dbRefTemp = firebase.database().ref().child('temperature');
     //var dbRefHum = firebase.database().ref().child(dbPathHum);
     //var dbRefPres = firebase.database().ref().child(dbPathPres);
 
