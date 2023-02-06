@@ -4,9 +4,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ESP IoT Firebase App</title>
+    <title>Greenhouse temperature monitor</title>
 
-    <!-- update the version number as needed -->
+    <!-- update the version number as needed, must have to be able to use firebase with our app -->
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
 
     <!-- include only the Firebase features as you need -->
@@ -15,15 +15,15 @@
 
     <script>
      // REPLACE WITH YOUR web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "REPLACE_WITH_YOUR_Firebase_CONFIGURATION",
-        authDomain: "REPLACE_WITH_YOUR_Firebase_CONFIGURATION",
-        databaseURL: "REPLACE_WITH_YOUR_Firebase_CONFIGURATION",
-        projectId: "REPLACE_WITH_YOUR_Firebase_CONFIGURATION",
-        storageBucket: "REPLACE_WITH_YOUR_Firebase_CONFIGURATION",
-        messagingSenderId: "REPLACE_WITH_YOUR_Firebase_CONFIGURATION",
-        appId: "REPLACE_WITH_YOUR_Firebase_CONFIGURATION"
-      };
+    const firebaseConfig = { 
+      apiKey: "AIzaSyCy3-DtGtHhTE3ouTFzL_Lp9ku-epRHGnI", 
+      authDomain: "greenhouse-monitor-cdc89.firebaseapp.com", 
+      databaseURL: "https://greenhouse-monitor-cdc89-default-rtdb.europe-west1.firebasedatabase.app", 
+      projectId: "greenhouse-monitor-cdc89", 
+      storageBucket: "greenhouse-monitor-cdc89.appspot.com", 
+      messagingSenderId: "720425266757", 
+      appId: "1:720425266757:web:4bcd00b43b170e6ace3d2c" 
+    }; 
 
       // Initialize firebase
       firebase.initializeApp(firebaseConfig);
@@ -41,7 +41,7 @@
 <body>
   <!--TOP BAR-->
   <div class="topnav">
-    <h1>Sensor Readings App <i class="fas fa-clipboard-list"></i></h1>
+    <h1>Temperature Reading App <i class="fas fa-clipboard-list"></i></h1>
   </div>
 
   <!--AUTHENTICATION BAR (USER DETAILS/LOGOUT BUTTON)-->
